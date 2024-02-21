@@ -1,0 +1,27 @@
+{
+  "name": "react-components-test-package",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/singodiyashubham87/react-components-test-package.git"
+  },
+  "keywords": [
+    "react-components-test-package",
+    "react-components"
+  ],
+  "author": "Master Mickey",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/singodiyashubham87/react-components-test-package/issues"
+  },
+  "homepage": "https://github.com/singodiyashubham87/react-components-test-package#readme",
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
