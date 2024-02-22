@@ -20,7 +20,7 @@ const styles = {
   },
   logo: {
     border: "4px solid white",
-    width: "200px",
+    width: "150px",
     height: "150px",
     borderRadius: "50%",
     marginRight: "1rem",
