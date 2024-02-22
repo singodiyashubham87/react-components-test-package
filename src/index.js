@@ -1,8 +1,4 @@
-import React from "../node_modules/react";
-import ReactDOM from "../node_modules/react-dom/client";
-import logo from "../../../PetCare/client/src/assets/images/avatar.png";
 import "./index.css";
-
 
 function Loader({ logo }) {
   return (
@@ -18,7 +14,6 @@ function Loader({ logo }) {
         />
         {/* Loading text */}
         <h5
-          style={{ fontFamily: "var(--fontPrimary)" }}
           className="textt text-white  text-[1rem] vvsm:text-[1.5rem] vsm:text-[1.7rem] md:text-[2.5rem] sm:text-[2rem] "
         >
           Loading...
@@ -28,9 +23,4 @@ function Loader({ logo }) {
   );
 }
 
-// export default Loader;
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<Loader logo={logo} />);
-
-// ReactDOM.render(<Loader />);
+export default Loader;
