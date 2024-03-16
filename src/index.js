@@ -4,6 +4,8 @@ import { NavLink } from "react-router-dom";
 import { IoMenu } from "react-icons/io5";
 import { RxCross1 } from "react-icons/rx";
 import "./styles/navbar.css";
+
+//Imports for loader component
 import "./styles/loader.css";
 
 //navItems = [{id: 1, to: "/", title: "Home"}, {id: 2, to: "/about", title: "About"}, {id: 3, to: "/services", title: "Services"}]
