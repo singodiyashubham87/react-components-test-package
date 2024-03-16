@@ -6,7 +6,7 @@ import { RxCross1 } from "react-icons/rx";
 import "../styles/navbar.css";
 
 //navItems = [{id: 1, to: "/", title: "Home"}, {id: 2, to: "/about", title: "About"}, {id: 3, to: "/services", title: "Services"}]
-function Navbar({ logo, navItems }) {
+export function Navbar({ logo, navItems }) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   function toggleMenu() {
@@ -55,5 +55,3 @@ function Navbar({ logo, navItems }) {
     </>
   );
 }
-
-export default Navbar;

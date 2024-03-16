@@ -1,6 +1,6 @@
 import "../styles/loader.css";
 
-function Loader({ logo }) {
+export function Loader({ logo }) {
   return (
     <div className="loader h-[100vh] w-[100vw] flex justify-center items-center bg-black">
       <div className="loading h-[100%] w-[100%] flex flex-col sm:flex-row justify-center items-center border-4 border-white-800">
@@ -17,5 +17,3 @@ function Loader({ logo }) {
     </div>
   );
 }
-
-export default Loader;
