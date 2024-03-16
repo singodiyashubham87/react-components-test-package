@@ -19,7 +19,7 @@ export function Navbar({ logo, navItems }) {
   return (
     <>
       <nav
-        className={`w-[90vw] bg-[#4f525770] backdrop-blur-lg font-primary px-4 xl:pr-8 py-2 flex justify-between items-center sticky top-4 mx-auto rounded-[10rem]`}
+        className={`w-[90vw] bg-[#4f525770] backdrop-blur-lg font-primary px-4 xl:pr-8 py-2 flex justify-between items-center fixed top-4 left-[50%] translate-x-[-50%] mx-auto rounded-[10rem]`}
       >
         <img
           src={logo}
