@@ -1,15 +1,14 @@
 /* eslint-disable react/prop-types */
-import { useState } from "react";
 import { NavLink } from "react-router-dom";
+import logo from "./assets/logo.jpg";
 import { IoMenu } from "react-icons/io5";
 import { RxCross1 } from "react-icons/rx";
-import "./styles/navbar.css";
-
-//Imports for loader component
-import "./styles/loader.css";
+import { useState } from "react";
+import "./styles/navbar.css"
+import "./styles/loader.css"
 
 //navItems = [{id: 1, to: "/", title: "Home"}, {id: 2, to: "/about", title: "About"}, {id: 3, to: "/services", title: "Services"}]
-export function Navbar({ logo, navItems }) {
+function Navbar({ navItems }) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   function toggleMenu() {
@@ -18,46 +17,57 @@ export function Navbar({ logo, navItems }) {
 
   return (
     <>
-      <nav
-        className={`w-[90vw] bg-[#4f525770] backdrop-blur-lg font-primary px-4 xl:pr-8 py-2 flex justify-between items-center fixed top-4 left-[50%] translate-x-[-50%] mx-auto rounded-[10rem]`}
-      >
-        <img
-          src={logo}
-          alt="logo"
-          className="w-[3rem] h-[3rem] lg:w-[4rem] lg:h-[4rem] rounded-[50%] border-[0.1px] border-black"
-        />
-        <div className="flex flex-col gap-4 items-end relative">
-          {!menuOpen ? (
-            <IoMenu
-              onClick={() => toggleMenu()}
-              className="text-[1.5rem] text-[#4f5257] gsm:text-[2rem] md:hidden hover:cursor-pointer"
-            />
-          ) : (
-            <RxCross1
-              onClick={() => toggleMenu()}
-              className="text-[1.5rem] text-[#4f5257] gsm:text-[2rem] md:hidden hover:cursor-pointer"
-            />
-          )}
-          <div
-            className={` ${
-              menuOpen ? "block" : "hidden"
-            } md:block flex flex-col md:flex md:flex-row gap-[1rem] xl:gap-[2rem] 2xl:gap-[3rem] justify-center items-center text-[1.5rem] font-semibold text-right absolute top-[4rem] md:top-0 md:relative transition ease-in-out duration-1000`}
-          >
-            {navItems.map((navItem) => (
-              <NavLink
-                key={navItem.id}
-                to={navItem.to}
-                className={`bg-[#4f5257] text-gray-300 md:text-black px-4 rounded-[10rem] md:bg-transparent md:px-0 md:rounded-0`}
-              >
-                {navItem.title}
-              </NavLink>
-            ))}
+      <div>
+        <nav
+          className={`w-[90vw] bg-[#4f525770] backdrop-blur-lg font-primary px-4 xl:pr-8 py-2 flex justify-between items-center fixed top-4 left-[50%] translate-x-[-50%] mx-auto rounded-[10rem]`}
+        >
+          <img
+            src={logo}
+            alt="logo"
+            className="w-[3rem] h-[3rem] lg:w-[4rem] lg:h-[4rem] rounded-[50%] border-[0.1px] border-black"
+          />
+          <div className="flex flex-col gap-4 items-end relative">
+            {!menuOpen ? (
+              <IoMenu
+                onClick={() => toggleMenu()}
+                className="text-[1.5rem] text-[#4f5257] gsm:text-[2rem] md:hidden hover:cursor-pointer"
+              />
+            ) : (
+              <RxCross1
+                onClick={() => toggleMenu()}
+                className="text-[1.5rem] text-[#4f5257] gsm:text-[2rem] md:hidden hover:cursor-pointer"
+              />
+            )}
+            <div
+              className={` ${
+                menuOpen ? "block" : "hidden"
+              } flex flex-col gap-[1rem] xl:gap-[2rem] 2xl:gap-[3rem] justify-center items-center text-[1.5rem] font-semibold text-right absolute top-[4rem] md:top-0 md:relative transition ease-in-out duration-1000 md:flex md:flex-row`}
+            >
+              {navItems.map((navItem) => (
+                <NavLink
+                  key={navItem.id}
+                  to={navItem.to}
+                  className={`bg-[#4f5257] text-gray-300 md:text-black px-4 rounded-[10rem] md:bg-transparent md:px-0 md:rounded-0`}
+                >
+                  {navItem.title}
+                </NavLink>
+              ))}
+            </div>
           </div>
+        </nav>
+        <div>
+          <img src={logo} alt="" className="background-center" />
         </div>
-      </nav>
+        <div>
+          <img src={logo} alt="" className="background-center" />
+        </div>
+      </div>
     </>
   );
 }
+
+export default Navbar;
+
 
 
 

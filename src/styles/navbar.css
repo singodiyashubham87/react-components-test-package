@@ -406,9 +406,6 @@ img,video {
     .md\:top-0 {
         top:0
     }
-    .md\:block {
-        display:block
-    }
     .md\:flex {
         display:flex
     }
