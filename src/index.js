@@ -8,7 +8,7 @@ import "./styles/navbar.css"
 import "./styles/loader.css"
 
 //navItems = [{id: 1, to: "/", title: "Home"}, {id: 2, to: "/about", title: "About"}, {id: 3, to: "/services", title: "Services"}]
-function Navbar({ navItems }) {
+export function Navbar({ navItems }) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   function toggleMenu() {
@@ -65,10 +65,6 @@ function Navbar({ navItems }) {
     </>
   );
 }
-
-export default Navbar;
-
-
 
 
 export function Loader({ logo }) {
